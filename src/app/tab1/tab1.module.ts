@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Tab1Page } from './tab1.page';
+import { ShopService } from  '../../providers/shop.service';
 
 @NgModule({
   imports: [
@@ -14,4 +15,17 @@ import { Tab1Page } from './tab1.page';
   ],
   declarations: [Tab1Page]
 })
-export class Tab1PageModule {}
+export class Tab1PageModule {
+
+  constructor(private shopService: ShopService ) {
+    this.shopService.getAllPublishedProducts()
+      .subscribe( (data: any) => {
+        console.log(data);
+      }, (errorService) => {
+        console.log("Error found: " + errorService);
+      }
+    );
+
+  }
+
+}

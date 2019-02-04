@@ -1,5 +1,11 @@
 {
-  "name": "wcMobile",
+  "name": "New Ionic App",
   "integrations": {},
-  "type": "angular"
+  "type": "angular",
+  "proxies": [
+    {
+      "path": "/wp-json",
+      "proxyUrl": "https://www.sixpro.eu/wp-json/wc/v3"
+    }
+  ]
 }
