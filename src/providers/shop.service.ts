@@ -23,6 +23,7 @@ export class ShopService {
 
     const headers = new HttpHeaders({
       'Authentication': 'Basic Y2tfODc5ZjhiZDFkMmEyMzAxMzA4YmM0OGQ0ZDE0ZTQxY2E5MmJjYjU1Nzpjc19jZWUxMzI2OTNjNTkxOTMzMTQ3MmZmZTI0ODQ5MTE1OWQ1NDA0ZWYz',
+      'Access-Control-Allow-Headers': 'X-Requested-With',
       'Access-Control-Allow-Origin': '*',
     });
 
